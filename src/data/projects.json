@@ -1,0 +1,9 @@
+[
+  {
+    "name": "TODO project name",
+    "description": "One or two sentences.",
+    "stack": ["TypeScript"],
+    "github": "https://github.com/",
+    "live": ""
+  }
+]

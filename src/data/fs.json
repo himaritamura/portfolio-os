@@ -1,0 +1,15 @@
+{
+  "type": "dir",
+  "name": "",
+  "children": [
+    {
+      "type": "dir",
+      "name": "projects",
+      "children": [
+        { "type": "file", "name": "example.txt", "content": "TODO: describe a project here." }
+      ]
+    },
+    { "type": "file", "name": "about.txt", "content": "TODO: a short intro about you." },
+    { "type": "file", "name": "contact.txt", "content": "TODO: email, GitHub, LinkedIn." }
+  ]
+}
