@@ -1,8 +1,8 @@
 import { useReducer } from "react";
 import { windowReducer } from "./windowReducer";
 // import { apps } from "../apps/registry"
-import Window from "../os/window"
-import Taskbar from "../os/Taskbar"
+import Window from "./Window"
+import Taskbar from "./Taskbar"
 
 export default function Desktop() {
   const [windows, dispatch] = useReducer(windowReducer, []);

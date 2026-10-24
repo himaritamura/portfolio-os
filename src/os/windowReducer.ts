@@ -1,5 +1,5 @@
 import type { Action, WindowState } from "./types";
-import { MIN_WIDTH, MIN_HEIGHT, MAX_WIDTH, MAX_HEIGHT, DEF_WIDTH, DEF_HEIGHT, TASKBAR_HEIGHT } from "./types";
+import { MIN_WIDTH, MIN_HEIGHT, MAX_WIDTH, MAX_HEIGHT, DEF_WIDTH, DEF_HEIGHT } from "./types";
 
 const START_X = 10;
 const START_Y = 10;
