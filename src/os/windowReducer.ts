@@ -77,6 +77,20 @@ export function windowReducer(state: WindowState[], action: Action): WindowState
       return state.map((w) =>
         w.id === action.id ? { ...w, maximized: !w.maximized, minimized: false } : w
       );
+    case "FIT": {
+      const { bounds } = action;
+      return state.map((w) => {
+        const width = clamp(w.width, MIN_WIDTH, bounds.width);
+        const height = clamp(w.height, MIN_HEIGHT, bounds.height);
+        return {
+          ...w,
+          width,
+          height,
+          x: clamp(w.x, 0, bounds.width - width),
+          y: clamp(w.y, 0, bounds.height - height)
+        }
+      });
+    }
     default:
       return state;
   }

@@ -12,7 +12,7 @@ export default function Clock() {
   }, []);
 
   return (
-    <time className="font-pixel tabular-nums" dateTime={now.toISOString()}>
+    <time className="font-heading text-parchment tabular-nums" dateTime={now.toISOString()}>
       {pad(now.getHours())}
       <span style={{ opacity: now.getSeconds() % 2 === 0 ? 1 : 0 }}>:</span>
       {pad(now.getMinutes())}

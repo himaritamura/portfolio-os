@@ -4,18 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        milk: "#FFF7FB",
+        // milk: "#FFF7FB",
+        parchment: "#EFE9E7",
         lilac: "#CDB8F5",
         mint: "#BFEBD7",
         bubblegum: "#FFB3D1",
         butter: "#FFE9A8",
         ink: "#2B2340",
-        clear: "#7c7fbb43",
         red: "#c24141",
+        lavender: "#dae0f2",
+        blueslate: "#3e5c6c",      
       },
       fontFamily: {
-        pixel: ['"Bitcount"', "ui-monospace", "monospace"],
-        body: ["Nunito", "system-ui", "sans-serif"],
+        name: ['"Rock 3D"', "ui-monospace", "monospace"],
+        heading: ["DotGothic16", "ui-monospace", "monospace"],
+        mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
       },
       borderRadius: { win: "14px" },
     },

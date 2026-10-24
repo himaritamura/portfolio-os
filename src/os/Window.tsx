@@ -76,7 +76,7 @@ export default function Window({ win, dispatch }: Props) {
       aria-label={win.appId}
       style={style}
       onPointerDown={() => dispatch({ type: "FOCUS", id: win.id })}
-      className="flex flex-col overflow-hidden rounded-win bg-milk"
+      className="flex flex-col overflow-hidden rounded-win bg-parchment"
     >
       <header
         onPointerDown={onPointerDown}
@@ -87,30 +87,35 @@ export default function Window({ win, dispatch }: Props) {
         className="flex touch-none select-none items-center gap-2 bg-clear p-2"
       >
         <button
+          aria-label="Close"
+          onClick={() => dispatch({ type: "CLOSE", id: win.id })}
+          className="h-4 w-4 rounded-full border border-ink/30 bg-red"
+        />
+        <button
           aria-label="Minimize"
           onClick={() => dispatch({ type: "MINIMIZE", id: win.id })}
-          className="h-4 w-4 rounded-full border border-ink/30 bg-mint"
+          className="h-4 w-4 rounded-full border border-ink/30 bg-butter"
         />
         <button
           aria-label="Maximize"
           onClick={() => dispatch({ type: "MAXIMIZE", id: win.id })}
-          className="h-4 w-4 rounded-full border border-ink/30 bg-lilac"
+          className="h-4 w-4 rounded-full border border-ink/30 bg-mint"
         />
-        <span className="font-pixel">{win.appId}</span>
-        <button
-          aria-label="Close"
-          onClick={() => dispatch({ type: "CLOSE", id: win.id })}
-          className="ml-auto h-4 w-4 rounded-full border border-ink/30 bg-red"
-        />
+        <span className="font-heading">{win.appId}</span>
       </header>
 
       <div className="flex-1 overflow-auto p-3">{/* app content goes here */}</div>
       
-      <div  onPointerDown={onResizeDown}
+      { !win.maximized && (
+        <div data-testid="resize-handle"
+            onPointerDown={onResizeDown}
             onPointerMove={onResizeMove} 
             onPointerUp={endResize}
             onPointerCancel={endResize}
-            className="absolute bottom-0 right-0 h-4 w-4 cursor-nwse-resize touch-none bg-bubblegum"/>
+            className="absolute bottom-0 right-0 h-4 w-4 cursor-nwse-resize touch-none bg-bubblegum"
+          />
+      )}
+      
     </section>
   );
 }

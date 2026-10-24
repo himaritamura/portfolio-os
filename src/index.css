@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html, body, #root { height: 100%; }
-body { @apply font-body text-ink bg-lilac; margin: 0; overflow: hidden; }
-
+body { @apply font-mono text-ink bg-lilac; margin: 0; overflow: hidden; }
+h2, h3, h4, h5, h6 { @apply font-heading; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }

@@ -13,7 +13,7 @@ export default function Taskbar({ windows, dispatch }: Props) {
   return (
     <nav
       style={{ height: TASKBAR_HEIGHT, zIndex: 100000 }}
-      className="fixed inset-x-0 bottom-0 flex items-center gap-2 bg-milk/80 px-3 backdrop-blur"
+      className="fixed inset-x-0 bottom-0 flex items-center gap-2 bg-blueslate/80 px-3 backdrop-blur"
     >
       {/* Launchers: one per app */}
       {apps.map((app) => (
@@ -38,7 +38,7 @@ export default function Taskbar({ windows, dispatch }: Props) {
             onClick={() =>
               dispatch(focused ? { type: "MINIMIZE", id: w.id } : { type: "FOCUS", id: w.id })
             }
-            className={`rounded-win px-3 py-1 font-pixel text-sm ${
+            className={`rounded-win px-3 py-1 text-sm ${
               focused ? "bg-bubblegum" : w.minimized ? "bg-ink/10 opacity-60" : "bg-mint"
             }`}
           >

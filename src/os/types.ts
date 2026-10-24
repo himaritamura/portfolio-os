@@ -17,7 +17,8 @@ export type Action =
   | { type: "MOVE"; id: string; x: number; y: number; bounds?: { width: number; height: number } }
   | { type: "RESIZE"; id: string; width: number; height: number;  bounds?: { width: number; height: number } }
   | { type: "MINIMIZE"; id: string }
-  | { type: "MAXIMIZE"; id: string };
+  | { type: "MAXIMIZE"; id: string }
+  | { type: "FIT"; bounds: { width: number; height: number } };
 
 export const MIN_WIDTH = 240;
 export const MIN_HEIGHT = 160;
