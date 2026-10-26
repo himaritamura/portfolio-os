@@ -16,7 +16,7 @@ export default {
         blueslate: "#3e5c6c",      
       },
       fontFamily: {
-        name: ['"Rock 3D"', "ui-monospace", "monospace"],
+        name: ['"Palette Mosaic"', "ui-monospace", "monospace"],
         heading: ["DotGothic16", "ui-monospace", "monospace"],
         mono: ['"IBM Plex Mono"', "ui-monospace", "monospace"],
       },

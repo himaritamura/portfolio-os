@@ -14,7 +14,32 @@ describe("parseInput", () => {
     expect(parseInput("  ls   ")).toEqual({ cmd: "ls", args: [] });
   });
 
-  it.todo("resolvePath: '..', '.', absolute, nonexistent, trailing slash");
-  it.todo("execute: every command, including error cases");
-  it.todo("autocomplete: unique, ambiguous, none");
+  it("collapses runs of spaces between arguments", () => {
+    expect(parseInput("cd    projects")).toEqual({ cmd: "cd", args: ["projects"] });
+  });
+
+  it("returns an empty command for empty input", () => {
+    expect(parseInput("")).toEqual({ cmd: "", args: [] });
+    expect(parseInput("   ")).toEqual({ cmd: "", args: [] });
+  });
+
+  it("treats an unterminated quote as one argument", () => {
+    expect(parseInput('cat "oops')).toEqual({ cmd: "cat", args: ["oops"] });
+  });
+
+  it("keeps spaces inside quotes", () => {
+    expect(parseInput('cat "a  b"')).toEqual({ cmd: "cat", args: ["a  b"] });
+  });
+
+  it("handles multiple quoted arguments", () => {
+    expect(parseInput('cp "a b" "c d"')).toEqual({ cmd: "cp", args: ["a b", "c d"] });
+  });
+
+  
+
+  
+
+  // it.todo("resolvePath: '..', '.', absolute, nonexistent, trailing slash");
+  // it.todo("execute: every command, including error cases");
+  // it.todo("autocomplete: unique, ambiguous, none");
 });

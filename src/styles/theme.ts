@@ -12,6 +12,6 @@ export const theme = {
     lavender: "#dae0f2",
     blueslate: "#3e5c6c",
   },
-  fonts: { name: '"Rock 3D"', heading: "DotGothic16", mono: '"IBM Plex Mono"' },
+  fonts: { name: '"Palette Mosaic"', heading: "DotGothic16", mono: '"IBM Plex Mono"' },
   radius: { win: "14px" },
 } as const;

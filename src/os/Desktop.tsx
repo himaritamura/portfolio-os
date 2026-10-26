@@ -24,7 +24,7 @@ export default function Desktop() {
   
 
   return (
-  <main className="relative h-full w-full bg-lavender">
+  <main className="relative h-full w-full bg-white">
     <h1 className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 select-none whitespace-pre-wrap text-center font-name font-bold text-6xl text-ink tracking-[0.25em]">
       HIMARI&#10;TAMURA
     </h1>

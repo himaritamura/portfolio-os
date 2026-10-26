@@ -13,7 +13,7 @@ export default function Taskbar({ windows, dispatch }: Props) {
   return (
     <nav
       style={{ height: TASKBAR_HEIGHT, zIndex: 100000 }}
-      className="fixed inset-x-0 bottom-0 flex items-center gap-2 bg-blueslate/80 px-3 backdrop-blur"
+      className="fixed inset-x-0 bottom-0 flex items-center gap-2 bg-ink/80 px-3 backdrop-blur"
     >
       {/* Launchers: one per app */}
       {apps.map((app) => (
